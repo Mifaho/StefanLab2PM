@@ -5,9 +5,11 @@
 
 #include "Rectangle.h"
 
-class Roundedrectangle : Rectangle {
+class Roundedrectangle : public Rectangle {
 private:
+    double radius;
 public:
+    Roundedrectangle(double height, double width, double radius);
     double getArea() override;
     char* getColour() override;
     //~Shape() override;

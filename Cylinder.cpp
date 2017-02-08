@@ -1,7 +1,7 @@
 #include "Cylinder.h"
 
-Cylinder::Cylinder(double radius, double height):height(height){
-    super(radius);
+Cylinder::Cylinder(double radius, double height):Circle(radius), height(height){
+    
 }
 
 double Cylinder::getArea(){

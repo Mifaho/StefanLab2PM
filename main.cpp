@@ -1,33 +1,41 @@
+#include "Shape.h"
 #include "Circle.h"
+#include "Cylinder.h"
+#include "Parallelpiped.h"
+#include "Rectangle.h"
+#include "Roundedrectangle.h"
+
 #include <cstdlib>
 #include <iostream>
 #include <string>
 #include <vector>
 #include <memory>
 
-using namespace std;
 
 size_t maxsize;
 
-void getData(size_t size, Shape** array) {
-    if (size <= maxsize) {
-        double totalarea = 0;
-        cout << "colours" << endl;
-        for (size_t i = 0; i < size; i++) {
-            totalarea = totalarea + array[i]->getArea();
-            cout << array[i]->getColour() << ", ";
-        }
-        cout << endl << endl << "total area size: " << totalarea << endl;   
+void getData(std::vector<std::unique_ptr<Shape>>& vec) {
+    std::cout << "colours" << std::endl;
+    double totalarea = 0;
+    for (size_t i = 0; i < vec.size(); i++) {
+        totalarea = totalarea + vec.at(i)->getArea();
+        std::cout << vec.at(i)->getColour() << ", ";
     }
+    std::cout << std::endl << std::endl << "total area size: " << totalarea << std::endl;
 }
 
+
 int main(int argc, char** argv) {
-    vector<std::unique_ptr<Shape>> vec;
-    vec.emplace_back(new Circle());
+    std::vector<std::unique_ptr<Shape>> vec;
+    vec.emplace_back(new Rectangle(10, 15));
+    vec.emplace_back(new Circle(10));
+    vec.emplace_back(new Parallelpiped(10, 15, 20));
+    vec.emplace_back(new Cylinder(10, 15));
+    vec.emplace_back(new Roundedrectangle(10, 15, 1));
+    getData(vec);
     //Shape* temp = new Shape();
     //array[0] = new Circle();
     /*for (size_t i = 0; i < 10; i++) {
-        
         array[i] = new Circle();
     }*/
     return 0;

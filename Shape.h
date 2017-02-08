@@ -1,6 +1,9 @@
 #ifndef SHAPE_H
 #define SHAPE_H
 
+
+#include <cmath>
+
 class Shape{
 public:
     char* colour;

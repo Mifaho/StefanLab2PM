@@ -1,5 +1,14 @@
-build/Debug/MinGW-Windows/main.o: main.cpp Circle.h Shape.h
+build/Debug/MinGW-Windows/main.o: main.cpp Shape.h Circle.h Cylinder.h \
+ Parallelpiped.h Rectangle.h Roundedrectangle.h
+
+Shape.h:
 
 Circle.h:
 
-Shape.h:
+Cylinder.h:
+
+Parallelpiped.h:
+
+Rectangle.h:
+
+Roundedrectangle.h:
