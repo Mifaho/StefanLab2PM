@@ -27,7 +27,7 @@ void getData(std::vector<std::unique_ptr<Shape>>& vec) {
 
 int main(int argc, char** argv) {
     std::vector<std::unique_ptr<Shape>> vec;
-    vec.emplace_back(new Rectangle(10, 15));
+    //vec.emplace_back(new Rectangle(10, 15));
     vec.emplace_back(new Circle(10));
     vec.emplace_back(new Parallelpiped(10, 15, 20));
     vec.emplace_back(new Cylinder(10, 15));
