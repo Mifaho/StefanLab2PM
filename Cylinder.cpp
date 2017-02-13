@@ -1,16 +1,16 @@
 #include "Cylinder.h"
 
-Cylinder::Cylinder(double radius, double height):Circle(radius), height(height){
+Cylinder::Cylinder(char* newcolour,double radius, double height):Circle(newcolour, radius), height(height){
     
 }
 
 double Cylinder::getArea(){
     //return Circle::getArea() * height;
-    return (2 * Circle::getArea()) + (height * (2 * 3.1415 * radius)); 
+    return (2 * pow(radius, 2) * 3.1415) + (height * (2 * 3.1415 * radius)); 
 }
 
 char* Cylinder::getColour(){
-    return Circle::getColour();
+    return colour;
 }
 /*
 Cylinder::~Shape() {

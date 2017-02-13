@@ -8,7 +8,7 @@ class Cylinder : public Circle {
 private:
     double height;
 public:
-    Cylinder(double radius, double height);
+    Cylinder(char* newcolour, double radius, double height);
     double getArea() override;
     char* getColour() override;
     //~Shape() override;

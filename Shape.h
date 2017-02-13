@@ -7,6 +7,7 @@
 class Shape{
 public:
     char* colour;
+    Shape(char* colour);
     virtual double getArea() = 0;
     virtual char* getColour() = 0;
     ~Shape();

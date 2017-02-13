@@ -1,6 +1,6 @@
 #include "Rectangle.h"
 
-Rectangle::Rectangle(double height, double width):height(height), width(width){
+Rectangle::Rectangle(char* colour, double height, double width):Shape(colour),height(height), width(width){
     
 }
 
@@ -9,7 +9,7 @@ double Rectangle::getArea(){
 }
 
 char* Rectangle::getColour(){
-    return Shape::colour;
+    return colour;
 }
 /*
 Rectangle::~Shape() {

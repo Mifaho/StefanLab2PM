@@ -9,7 +9,7 @@ class Roundedrectangle : public Rectangle {
 private:
     double radius;
 public:
-    Roundedrectangle(double height, double width, double radius);
+    Roundedrectangle(char* colour, double height, double width, double radius);
     double getArea() override;
     char* getColour() override;
     //~Shape() override;

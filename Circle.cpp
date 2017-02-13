@@ -1,6 +1,6 @@
 #include "Circle.h"
 
-Circle::Circle(double radius):radius(radius) {
+Circle::Circle(char* colour, double radius):Shape(colour), radius(radius) {
     
 }
 
@@ -9,7 +9,7 @@ double Circle::getArea() {
 }
 
 char* Circle::getColour() {
-    return Shape::colour;
+    return colour;
 }
 /*
 Circle::~Shape() {

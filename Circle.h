@@ -7,7 +7,7 @@ class Circle : public Shape {
 private:
 public:
     double radius;
-    Circle(double radius);
+    Circle(char* colour, double radius);
     double getArea() override;
     char* getColour() override;
    // ~Shape() override;

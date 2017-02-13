@@ -1,16 +1,16 @@
 #include "Parallelpiped.h"
 
-Parallelpiped::Parallelpiped(double height, double width, double depth):Rectangle(height, width), depth(depth){
+Parallelpiped::Parallelpiped(char* newcolour, double height, double width, double depth):Rectangle(newcolour, height, width), depth(depth){
     
 }
 
 double Parallelpiped::getArea() {
     //return Rectangle::getArea() * depth;
-    return Rectangle::getArea() * 2 + width * depth * 2 + height * depth * 2;
+    return height * width * 2 + width * depth * 2 + height * depth * 2;
 }
 
 char* Parallelpiped::getColour() {
-    return Rectangle::getColour();
+    return colour;
 }
 /*
 Parallelpiped::~Shape() {

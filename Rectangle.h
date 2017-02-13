@@ -7,7 +7,7 @@ class Rectangle :public Shape {
 public:
     double height;
     double width;
-    Rectangle(double height, double width);
+    Rectangle(char* colour, double height, double width);
     double getArea() override;
     char* getColour() override;
    //~Shape() override;
